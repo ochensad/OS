@@ -1,0 +1,89 @@
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english,russian]{babel} % Языки: русский, английский
+%\usepackage{pscyr} % Нормальные шрифты
+\usepackage{enumitem} % Настройка оформления списков
+
+\usepackage[14pt]{extsizes} % Задание 14-размера шрифта
+
+\usepackage{caption} % Подпись картинок и таблиц
+\captionsetup{labelsep=endash} % Разделитель между номером и текстом краткое тире и пробел
+\captionsetup[figure]{name={Рисунок}} % Изменяет имя для всех фигур на "Рисунок"
+
+\usepackage{amsmath} % Что-то связанное с математикой
+
+\usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm]{geometry} % Задание геометрии листа
+
+\usepackage{titlesec} % Оформление заголовков
+\titleformat{\section}
+	{\normalsize\bfseries}
+	{\thesection}
+	{1em}{}
+\titlespacing*{\chapter}{0pt}{-30pt}{8pt}
+\titlespacing*{\section}{\parindent}{*4}{*4}
+\titlespacing*{\subsection}{\parindent}{*4}{*4}
+
+\usepackage{titlesec}
+\titleformat{\chapter}{\LARGE\bfseries}{\thechapter}{20pt}{\LARGE\bfseries}
+\titleformat{\section}{\Large\bfseries}{\thesection}{20pt}{\Large\bfseries}
+
+\usepackage{setspace}
+\onehalfspacing % Полуторный интервал
+
+\frenchspacing
+\usepackage{indentfirst} % Красная строка
+
+\usepackage{listings} % Оформление листингов
+\usepackage{xcolor} % Добавление цветов 
+
+\lstdefinestyle{asm}{ % Опеределение стиля 
+	language={[x86masm]Assembler},
+	backgroundcolor=\color{white},
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\color{blue},
+	stringstyle=\color{red},
+	commentstyle=\color{gray},
+	numbers=left,
+	numberstyle=\tiny,
+	stepnumber=1,
+	numbersep=5pt,
+	frame=single,
+	tabsize=4,
+	captionpos=b,
+	breaklines=true,
+	breakatwhitespace=true
+}
+
+\usepackage{pgfplots} % Построение графиков
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\usepackage{graphicx} % Вставка рисунков
+
+\newcommand{\img}[3] {
+	\begin{figure}[h!]
+		\center{\includegraphics[height=#1]{img/#2}}
+		\caption{#3}
+		\label{img:#2}
+	\end{figure}
+}
+
+%\newcommand{\boximg}[3] {
+%	\begin{figure}[h]
+%		\center{\fbox{\includegraphics[height=#1]{inc/img/#2}}}
+%		\caption{#3}
+%		\label{img:#2}
+%	\end{figure}
+%}
+
+\usepackage[justification=centering]{caption} % Настройка подписей float объектов
+
+\usepackage[unicode,pdftex]{hyperref} % Ссылки в pdf
+\hypersetup{hidelinks}
+
+\usepackage{csvsimple}
+
+
+
+%\newcommand{\code}[1]{\texttt{#1}}
